@@ -12,7 +12,7 @@ def countOccurences(File, separator):
     with open(File, 'r') as file:
         data = file.read()
         dataList = sorted(list(map(int, data.split(separator))))
-        #print(dataList)
+        print(dataList)
         for element in dataList:
             if element not in occ:
                 occ[int(element)] = 0
@@ -97,6 +97,8 @@ if __name__ == "__main__":
     plotDataModel(fig, datax, datay, xExpoFit, yExpoFit, 'Hurricanes/year', 'Amount', 'Exponential fitting')
     plotDataModel(fig, datax, datay, xLinearFit, yLinearFit, 'Hurricanes/year', 'Amount', 'Linear fitting')
 
+    print(coeff)
+    print(coeff2)
     print(coeff3)
 
     plt.show()
